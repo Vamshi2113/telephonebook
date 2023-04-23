@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link(href='../static/dashboard.css', rel='stylesheet')
+  body
+    .main
+      | Enter mobile number to save 
+      .mobile_number_form
+        form.number_form(method='POST', action='/save_number')
+          .input_container
+            label(for='NAME')
+              | ENTER NAME :
+            input(type='text', name='NAME')
+          .input_container
+            label(for='MOBILE NUMBER')
+              | MOBILE NUMBER :
+            input(type='tel', name='MOBILE NUMBER')
+          button(type='submit') SAVE
+    .book
+      label(for='mobile_number') SAVED MOBILE NUMBERS
+      .mobile_numbers_box
+        .number  1256488
+    script(src='../static/dashboard.js')

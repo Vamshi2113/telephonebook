@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        Enter mobile number to save 
+
+        <div class="mobile_number_form">
+          <form class="number_form" method="POST" action="/save_number">
+        <div class="input_container">
+            <label for="NAME" >
+                ENTER NAME :
+            </label>
+            <input type="text" name="NAME">
+        </div>
+        <div class="input_container">
+            <label for="MOBILE NUMBER" >
+                MOBILE NUMBER :
+            </label>
+            <input type="tel" name="MOBILE NUMBER">
+        </div>
+            <button type="submit">SAVE</button>
+          </form>
+        </div>
+    </div>
+
+    <div class="book">
+        <label for="mobile_number">SAVED MOBILE NUMBERS</label>
+        <div class="mobile_numbers_box">
+            <div class="number"> 1256488</div>
+
+        </div>
+        
+    </div>
+    
+<script src="dashboard.js">
+</script>
+</body>
+</html>
