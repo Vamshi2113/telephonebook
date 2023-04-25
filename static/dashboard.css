@@ -92,9 +92,11 @@ padding-left: 15px;
     align-items: center;
     border-radius: 30px;
     border: 1px solid red;
+    margin-left: 15%;
 }
 .mobile_numbers_box{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     border: 2px solid rgba(255, 153, 1, 0.914);
     height: 90%;

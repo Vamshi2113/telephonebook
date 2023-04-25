@@ -19,9 +19,10 @@ html(lang='en')
             label(for='MOBILE NUMBER')
               | MOBILE NUMBER :
             input(type='tel', name='MOBILE NUMBER')
-          button(type='submit') SAVE
+          button.form__submit_btn(type='submit') SAVE
     .book
       label(for='mobile_number') SAVED MOBILE NUMBERS
       .mobile_numbers_box
-        .number  1256488
+         each i in numbers
+              .number #{i.name}: #{i.phone}
     script(src='../static/dashboard.js')
