@@ -25,4 +25,7 @@ html(lang='en')
       .mobile_numbers_box
          each i in numbers
               .number #{i.name}: #{i.phone}
+                  .btn(id=i.id type="button" onclick="clicked(event)")
+                   |DELETE
     script(src='../static/dashboard.js')
+    

@@ -9,6 +9,7 @@ html(lang='en')
   body
     .main
       | ENTER THE WEBSITE 
-      .enter_btn
-        | ENTER
+      form(class="submit_form" action="/home" method="GET")
+        button(type="submit" class="enter_btn" )
+          | ENTER
     script(src='../static/home.js')

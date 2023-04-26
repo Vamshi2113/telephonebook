@@ -56,7 +56,7 @@ app.get("/home",async(req,res)=>{
     console.log("recieved home.get")
 
     let data= await phonemodel.find({},{});
-    console.log("data=",data)
+
     let params={numbers:data};
 
     res.render("dashboard.pug",params)
@@ -73,6 +73,19 @@ app.post("/save_number",async (req,res)=>{
     console.log("phn model==>",phonemodel,"===end===")
     await phonedata.save();
     res.redirect("/home")
+})
+
+
+app.use(express.json());
+app.use(express.urlencoded());
+app.post("/delete_number",async(req,res)=>{
+  console.log("delete)")
+  console.log(req.body)
+
+  await phonemodel.deleteOne({ _id:req.body.id});
+
+res.send(JSON.stringify({sucess:"sucess"})).status(200);
+
 })
 
 
